@@ -26,6 +26,14 @@ class Movie {
     }
   }
 
+  get fullBackdropPath {
+    if (this.posterPath != null) {
+      return 'https://image.tmdb.org/t/p/w500${this.backdropPath}';
+    } else {
+      return 'https://image.tmdb.org/t/p/w500${this.backdropPath}';
+    }
+  }
+
   bool adult;
   String? backdropPath;
   List<int> genreIds;
