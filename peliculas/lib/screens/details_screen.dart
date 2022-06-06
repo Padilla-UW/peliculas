@@ -14,8 +14,11 @@ class DetailsScreen extends StatelessWidget {
       slivers: [
         _CustomAppBar(movie),
         SliverList(
-          delegate: SliverChildListDelegate(
-              [_PosterAndTitle(movie), _Overview(movie), CastingCards()]),
+          delegate: SliverChildListDelegate([
+            _PosterAndTitle(movie),
+            _Overview(movie),
+            CastingCards(movie.id),
+          ]),
         )
       ],
     ));
